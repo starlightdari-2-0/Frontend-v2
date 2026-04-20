@@ -133,6 +133,12 @@ export const PostImage = styled(Image)`
   border-radius: 24px;
 `;
 
+export const PreviewImage = styled.img`
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+`;
+
 export const Footer = styled.div`
   display: flex;
   align-items: center;

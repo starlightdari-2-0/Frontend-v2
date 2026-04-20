@@ -88,7 +88,7 @@ export const Comment: React.FC<CommentProps> = ({ comment, currentUserId = null,
                                 </Item>
                             </Reaction>
                             {isOwner && (
-                                <More type="button" onClick={() => setShowMenu((prev) => !prev)}>
+                                <More onClick={() => setShowMenu((prev) => !prev)}>
                                     <Image src={more} alt="" width={48} height={48} />
                                     {showMenu && (
                                         <Menu>

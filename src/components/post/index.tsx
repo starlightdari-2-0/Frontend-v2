@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { Comment } from "../comment";
-import { PostWrapper, PostImage, Author, LikeButton, Header, AuthorImage, Nickname, More, Body, ContentWrapper, Title, Content, Footer, LikeSection, Count, CommentInputContainer, SubmitButton, CommentInput, NoComment, EditInput, EditTextarea, EditActions, EditButton, EditFileInput } from "./styles";
+import { PostWrapper, PostImage, PreviewImage, Author, LikeButton, Header, AuthorImage, Nickname, More, Body, ContentWrapper, Title, Content, Footer, LikeSection, Count, CommentInputContainer, SubmitButton, CommentInput, NoComment, EditInput, EditTextarea, EditActions, EditButton, EditFileInput } from "./styles";
 import comment from "/public/myComment.svg";
 import more from "/public/comment_more.svg";
 import send from "/public/send_comment.svg";
@@ -346,7 +346,13 @@ export const Post: React.FC<PostProps> = ({ post }) => {
                         </>
                     )}
                 </ContentWrapper>
-                {postImageSrc && <PostImage src={postImageSrc} alt="" width={328} height={328} />}
+                {postImageSrc && (
+                    editImagePreview ? (
+                        <PreviewImage src={postImageSrc} alt="" />
+                    ) : (
+                        <PostImage src={postImageSrc} alt="" width={328} height={328} />
+                    )
+                )}
             </Body>
             <Footer>
                 <LikeSection>

@@ -115,7 +115,7 @@ export const Item = styled.button<{ $active?: boolean }>`
   cursor: pointer;
 `;
 
-export const More = styled.button`
+export const More = styled.div`
   border: none;
   background: none;
   cursor: pointer;

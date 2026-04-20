@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { PostWrapper, PostImage, Author, LikeButton, Header, AuthorImage, Nickname, More, Body, ContentWrapper, Title, Content, Footer, LikeSection, Count } from "./styles";
+import { PostWrapper, PostImage, Author, LikeButton, Header, AuthorImage, Nickname, Body, ContentWrapper, Title, Content, Footer, LikeSection, Count } from "./styles";
 import { PostPreviewType } from "../../types/postPreviewType";
 import comment from "/public/myComment.svg";
 import { resolveImageSrc } from "../../utils/resolveImageSrc";
@@ -55,7 +55,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, onClick }) => {
                         😢 {likes.like3}
                     </LikeButton>
                 </LikeSection>
-                <Count><Image src={comment} alt="" width={24} height={24} /> 0</Count>
+                <Count><Image src={comment} alt="" width={24} height={24} /> {post.comments}</Count>
             </Footer>
         </PostWrapper>
     );
