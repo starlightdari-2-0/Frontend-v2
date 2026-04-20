@@ -17,6 +17,7 @@ export const Header = styled.div`
   gap: 12px;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 
 export const Author = styled.div`
@@ -42,6 +43,7 @@ export const Nickname = styled.span`
 export const More = styled.button`
   border: none;
   background: none;
+  cursor: pointer;
 `;
 
 export const Body = styled.div`
@@ -75,6 +77,55 @@ export const Content = styled.div`
   font-size: 14px;
   line-height: 150%;
   color: #d9e0ed;
+`;
+
+export const EditInput = styled.input`
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #3c424b;
+  border-radius: 8px;
+  background: #2a2f39;
+  color: #d9e0ed;
+  padding: 10px 12px;
+  font-family: Pretendard;
+  font-size: 18px;
+  line-height: 150%;
+  outline: none;
+`;
+
+export const EditTextarea = styled.textarea`
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 120px;
+  border: 1px solid #3c424b;
+  border-radius: 8px;
+  background: #2a2f39;
+  color: #d9e0ed;
+  padding: 10px 12px;
+  font-family: Pretendard;
+  font-size: 14px;
+  line-height: 150%;
+  outline: none;
+  resize: vertical;
+`;
+
+export const EditActions = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+`;
+
+export const EditButton = styled.button`
+  border: 1px solid #3c424b;
+  border-radius: 8px;
+  background: #2a2f39;
+  color: #d9e0ed;
+  padding: 8px 14px;
+  cursor: pointer;
+`;
+
+export const EditFileInput = styled.input`
+  display: none;
 `;
 
 export const PostImage = styled(Image)`
@@ -112,12 +163,13 @@ export const LikeButton = styled.button<{ $active: boolean }>`
 `;
 
 export const Count = styled.span`
-  width: 70px;
+  min-width: 70px;
   height: 36px;
   padding-right: 16px;
   padding-left: 16px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 4px;
   font-family: Pretendard;
   font-weight: 400;

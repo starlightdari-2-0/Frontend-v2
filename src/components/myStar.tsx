@@ -95,7 +95,7 @@ const MyStar = () => {
       <PetList>
         {petDatas?.map((item, index) => (
           <Pet key={index}>
-            <PetImage src={item.pet_svg} alt="pet photo" />
+            <PetImage src={item.pet_svg} alt="pet photo" width={260} height={260} />
             <PetName>{item.pet_name}자리</PetName>
             <ButtonWrapper>
               <PetButton onClick={() => router.push(`/main/${item.pet_id}`)}>

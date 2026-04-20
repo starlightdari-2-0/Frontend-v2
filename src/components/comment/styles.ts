@@ -28,6 +28,42 @@ export const Content = styled.div`
   color: #d9e0ed;
 `;
 
+export const EditInput = styled.input`
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #3c424b;
+  border-radius: 8px;
+  background: #2a2f39;
+  color: #d9e0ed;
+  padding: 10px 12px;
+  font-family: Pretendard;
+  font-size: 14px;
+  line-height: 150%;
+  outline: none;
+`;
+
+export const EditActions = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+`;
+
+export const EditButton = styled.button`
+  border: 1px solid #3c424b;
+  border-radius: 8px;
+  background: #2a2f39;
+  color: #d9e0ed;
+  padding: 8px 14px;
+  font-family: Pretendard;
+  font-size: 13px;
+  line-height: 150%;
+  cursor: pointer;
+
+  &:hover {
+    background: #383a40;
+  }
+`;
+
 export const AuthorImage = styled(Image)`
   width: 36px;
   height: 36px;
@@ -53,7 +89,7 @@ export const Date = styled.div`
 
 export const Bottom = styled.div`
   width: 100%;
-  height: 48px;
+  min-height: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,8 +99,9 @@ export const Reaction = styled.div`
   display: flex;
 `;
 
-export const Item = styled.span`
+export const Item = styled.button<{ $active?: boolean }>`
   display: flex;
+  align-items: center;
   gap: 4px;
   padding-right: 12px;
   padding-left: 12px;
@@ -72,12 +109,49 @@ export const Item = styled.span`
   font-weight: 500;
   font-size: 12px;
   line-height: 150%;
-  color: #7d8799;
+  color: ${({ $active }) => ($active ? "#AFCBFB" : "#7d8799")};
+  background: none;
+  border: none;
+  cursor: pointer;
 `;
 
 export const More = styled.button`
   border: none;
   background: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const Menu = styled.div`
+  position: absolute;
+  right: 0;
+  top: 38px;
+  width: 96px;
+  background: #2b2d31;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+`;
+
+export const MenuItem = styled.button`
+  background: none;
+  border: none;
+  color: #a5b4c5;
+  padding: 10px 14px;
+  font-family: Pretendard;
+  font-size: 13px;
+  line-height: 150%;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: #383a40;
+  }
 `;
 
 export const Reply = styled.div`

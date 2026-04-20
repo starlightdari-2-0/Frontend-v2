@@ -34,7 +34,7 @@ const ConstellationList: React.FC<Props> = ({ constellations }) => {
       {constellations.map((c) => (
         <Card key={c.id}>
           <Name>{c.name}</Name>
-          <PetImage src={c.imageUrl} alt={c.name} />
+          <PetImage src={c.imageUrl} alt={c.name} width={60} height={60} />
           <Count><Image src={star} alt={star} /> {c.count}개</Count>
         </Card>
       ))}
@@ -43,4 +43,3 @@ const ConstellationList: React.FC<Props> = ({ constellations }) => {
 };
 
 export default ConstellationList;
-

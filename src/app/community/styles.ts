@@ -18,16 +18,24 @@ export const Container = styled.div`
   position: relative;
   overflow-y: auto;
 
-  /* 스크롤바 숨김 (선택 사항) */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
   }
 `;
 
 export const MemoryStarList = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px; // 임의 지정
+  gap: 10px;
+`;
+
+export const EmptyMessage = styled.p`
+  margin: 40px 0 0;
+  color: #a5b4c5;
+  font-family: Pretendard;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
 `;

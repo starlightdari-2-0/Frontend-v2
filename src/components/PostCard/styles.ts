@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const PostWrapper = styled.div`
+export const PostWrapper = styled.div<{ $clickable?: boolean }>`
   width: 328px;
   background-color: #1f2027;
   color: #fff;
@@ -9,6 +9,7 @@ export const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  cursor: ${({ $clickable }) => ($clickable ? "pointer" : "default")};
 `;
 
 export const Header = styled.div`

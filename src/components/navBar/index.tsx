@@ -35,7 +35,7 @@ const NavBar = () => {
         active={false}
         activeIcon={community}
         inactiveIcon={community_inactive}
-        onClick={() => router.push(`/starCommunity`)}
+        onClick={() => router.push(`/community/memory`)}
       />
       <Item
         label="내 별자리"

@@ -18,7 +18,8 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "starlightbucket.s3.ap-northeast-2.amazonaws.com",
-        port: "/**",
+        port: "",
+        pathname: "/**",
       },
       {
         protocol: "https",
@@ -29,6 +30,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "starlightbucket2.s3.amazonaws.com",
         port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "dummy.image",
+        port: "",
+        pathname: "/**",
       },
       { protocol: "http", hostname: "img1.kakaocdn.net" },
       { protocol: "http", hostname: "k.kakaocdn.net" },
